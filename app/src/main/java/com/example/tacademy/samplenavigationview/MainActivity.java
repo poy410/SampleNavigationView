@@ -1,5 +1,6 @@
 package com.example.tacademy.samplenavigationview;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.menu_1:
             case R.id.menu_2:
+                startActivity(new Intent(this,AppbarActivity.class));
             case R.id.menu_3:
                 Toast.makeText(this,"menu item selel : "+ item.getItemId(),Toast.LENGTH_SHORT).show();
                 return true;
